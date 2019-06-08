@@ -1,5 +1,5 @@
 # Deeplack
-Deeplack is an experimental script for finding differences between images and notifiying the user via Slack. It makes use of [DeepAI](https://deepai.org/) to compare the images. The purpose of this project is to look for changes on web applications given old and new screenshots.
+Deeplack is an experimental script for finding differences between images and notifiying the user via Slack. It makes use of [DeepAI](https://deepai.org/) to compare the images. The purpose of this script is to look for changes on web applications given old and new screenshots.
 # Installation
 
 ```
