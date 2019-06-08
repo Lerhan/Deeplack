@@ -46,7 +46,7 @@ def upload_image_slack(path, comment):
             'file': open(path, 'rb')
         },
         data={
-            'title':os.path.basename(path),
+            'title':path,
             'initial_comment':comment,
             'channels':slack_channel,
             'token':slack_bearer
@@ -63,8 +63,8 @@ def main():
         parser.error('Please specify new and old directories')
 
     for file in os.listdir(os.path.join(os_getcwd(), options.old_directory)):
-        new_path=os.path.join(os.path.join(os_getcwd(), options.new_directory, file))
-        old_path=os.path.join(os.path.join(os_getcwd(), options.old_directory, file))
+        new_path=os.path.normpath(os.path.join(os_getcwd(), options.new_directory, file))
+        old_path=os.path.normpath(os.path.join(os_getcwd(), options.old_directory, file))
         if os.path.isfile(new_path):
 
             r = requests.post(
