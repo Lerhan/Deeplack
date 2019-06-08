@@ -14,7 +14,7 @@ The slack channel name is the name of the channel that you want the images to be
 
 # Usage
 Pass both old and new directories to Deeplack: `deeplack.py -nd <NEW_DIRECTORY> -od <OLD_DIRECTORY>`
-It's best to combine this functionality with [webscreenshot](https://github.com/maaaaz/webscreenshot) since it gives he best input for Deeplack.
+It's best to combine this functionality with [webscreenshot](https://github.com/maaaaz/webscreenshot) since it gives the best input for Deeplack.
 ### Usage WITHOUT webscreenshot
 Put your screenshots in two directories, one for old screenshots and another one for new ones. The filenames of both new and old screenshots must be the same (ex. `DirectoryOld/http_google.com.png` and `DirectoryNew/http_google.com.png`).
 
