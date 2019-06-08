@@ -66,7 +66,6 @@ def main():
         new_path=os.path.normpath(os.path.join(os_getcwd(), options.new_directory, file))
         old_path=os.path.normpath(os.path.join(os_getcwd(), options.old_directory, file))
         if os.path.isfile(new_path):
-
             r = requests.post(
                 "https://api.deepai.org/api/image-similarity",
                 files={
