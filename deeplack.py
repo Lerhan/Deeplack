@@ -75,8 +75,8 @@ def main():
                 headers={'api-key': os.environ['DEEPAI_API_KEY']}
             )
             distance=r.json()["output"]["distance"]
-            print("The images are different and the distance is: " + str(distance))
-            if (distance >= options.sensitivity):
+            if (distance > options.sensitivity):
+                print("The images are different and the distance is: " + str(distance))
                 print("Uploading files to slack...")
                 upload_image_slack(new_path,"NEW")
                 upload_image_slack(old_path,"OLD")
